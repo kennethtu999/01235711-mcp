@@ -1,0 +1,23 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "mcp-service",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-06-14",
+	"assets": {
+		"directory": "./public"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "mcp-db",
+			"database_id": "0a633d17-a2ea-43c7-8b24-367a44e219f4"
+		}
+	]
+}
